@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnergyFlow Planner</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon (rename your image to ep-logo.png) -->
+    <link rel="icon" type="image/png" href="ep-logo.png">
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-content">
+        <div class="logo">EP</div>
+
+        <div class="title-text">
+            <h1>EnergyFlow Planner</h1>
+            <p>Track your energy & plan your day!</p>
+        </div>
+    </div>
+</header>
+
+<!-- HOW TO USE BUTTON -->
+<div class="help-toggle" onclick="toggleGuide()">
+    How to Use ▼
+</div>
+
+<!-- HOW TO USE CONTENT (hidden until clicked) -->
+<section id="how-to-use">
+    <h2>How to Use EnergyFlow Planner</h2>
+    <ol>
+        <li>Log your energy level from 1–10 in the energy section.</li>
+        <li>Add notes about how you feel or what affected your energy.</li>
+        <li>Add daily tasks in the planner section.</li>
+        <li>Check your energy logs to see your productivity patterns.</li>
+        <li>Use the planner to organize your day based on your energy.</li>
+    </ol>
+</section>
+
+<!-- Energy Input Form -->
+<section id="energy-section">
+    <h2>Log Your Energy</h2>
+
+    <form id="energy-form">
+        <label for="energy">Energy Level (1-10):</label>
+        <input type="number" id="energy" min="1" max="10" required>
+
+        <label for="notes">Notes (optional):</label>
+        <input type="text" id="notes" placeholder="e.g., slept late, exercised">
+
+        <button type="submit">Add Entry</button>
+    </form>
+
+    <div id="energy-log">
+        <h3>Energy Log</h3>
+        <ul id="log-list"></ul>
+    </div>
+</section>
+
+<!-- Tasks Section -->
+<section id="tasks-section">
+    <h2>Daily Tasks / Planner</h2>
+
+    <form id="task-form">
+        <input type="text" id="task-name" placeholder="Task name" required>
+        <input type="time" id="task-time" required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <div id="task-list-container">
+        <ul id="task-list"></ul>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p class="creator-info">Created by: Faith Glory Mwangi</p>
+    <p class="creator-info">
+        Email:
+        <a href="mailto:glorymwangi181@gmail.com">glorymwangi181@gmail.com</a>
+        |
+        Phone:
+        <a href="tel:+254757330164">+254 757 330164</a>
+    </p>
+</footer>
+
+<!-- Toggle Script -->
+<script>
+function toggleGuide() {
+    const guide = document.getElementById("how-to-use");
+
+    if (guide.style.display === "none" || guide.style.display === "") {
+        guide.style.display = "block";
+    } else {
+        guide.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

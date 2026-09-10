@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+}
+
+header {
+    background: #6a5acd;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+h2 {
+    color: #333;
+}
+
+input, button {
+    padding: 8px;
+    margin: 5px 0;
+}
+
+button {
+    background: #4f4094;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #7b68ee;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer {
+    background: #6a5acd;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+header {
+    background: #6a5acd;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* for positioning the logo */
+}
+
+header .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    color: white;
+    background: rgba(0,0,0,0.2); /* subtle background behind logo */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+header {
+    background: #6a5acd;
+    color: white;
+    padding: 20px;
+}
+
+header .header-content {
+    display: flex;           /* align logo and title horizontally */
+    align-items: center;     /* vertical alignment */
+    justify-content: center; /* center horizontally */
+    gap: 15px;               /* space between logo and title */
+}
+
+header .logo {
+    font-size: 40px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    color: white;
+}
+
+header .title-text h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header .title-text p {
+    margin: 2px 0 0 0;
+    font-size: 14px;
+}
+/* Background Watermark */
+body::before {
+    content: "EP";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 200px;              /* size of watermark */
+    font-weight: bold;
+    font-style: italic;
+    color: rgba(106, 90, 205, 0.05); /* very transparent purple */
+    transform: translate(-50%, -50%) rotate(-30deg); /* center and rotate */
+    pointer-events: none;          /* allows clicking through */
+    z-index: 0;
+}
+
+/* Make sure content is above the watermark */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+/* Make title clickable */
+.title-text {
+    cursor: pointer;
+}
+
+/* Hidden by default */
+#how-to-use {
+    display: none;
+    background: #f0f0ff;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+/* Style heading */
+#how-to-use h2 {
+    color: #4f4094;
+}
+
+/* List spacing */
+#how-to-use li {
+    margin-bottom: 8px;
+}
+
+/* Clickable How to Use bar */
+.help-toggle {
+    text-align: center;
+    background: #ddd;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Hidden instructions */
+#how-to-use {
+    display: none;
+    background: #f0f0ff;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+}
